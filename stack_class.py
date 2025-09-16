@@ -67,6 +67,5 @@ def reverse_string(statement):
 
 
 if __name__ == "__main__":
-    statement = "안녕하세요, 반갑습니다."
-
-    reverse_string(statement)
+    ass = input("글을 적어주세요 : ")
+    reverse_string(ass)
