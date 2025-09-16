@@ -21,7 +21,7 @@ class ArrayStack:
         if not self.is_full():
             self.top += 1
             self.array[self.top] = item
-            print("PUSH : {item!r} -> stack is now {self.array[:self.top + 1]}")
+            print(f"PUSH : {item!r} -> stack is now {self.array[:self.top + 1]}")
         else :
             raise OverflowError("Stack Overflow")
 
@@ -68,4 +68,5 @@ def reverse_string(statement):
 
 if __name__ == "__main__":
     statement = "안녕하세요, 반갑습니다."
+
     reverse_string(statement)
