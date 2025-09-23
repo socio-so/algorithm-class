@@ -130,7 +130,32 @@ def test_basic():
     print("peek:", q.peek())
 
      
+def quiz_2():
+    #1. capacity = 8인 원형 큐
+    print("==========Quiz_2==========")
+    q = CircularQueueOneSlotEmpty(capacity = 8)
+
+    #2. front = rear = 6
+    q.front = 6
+    q.rear = 6
+
+    #연산처리
+    q.enqueue(10)
+    q.display("10 삽입 결과")
+    q.enqueue(11)
+    q.display("11 삽입 결과")
+    q.enqueue(12)
+    q.display("12 삽입 결과")
+    q.enqueue(13)
+    q.display("13삽입결과")
+    q.dequeue()
+    q.display("삽입결과")
+    q.dequeue()
+    q.display("삽입결과")
+
+    #front = ?, rear = ?
+    print(f"front={q.front}, rear={q.rear}")
 
 if __name__ == "__main__":
-    test_basic()
-    
+    #test_basic()
+    quiz_2()
