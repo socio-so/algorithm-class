@@ -25,12 +25,21 @@ def factorial_rec(n):
     return n * factorial_rec(n-1)
 
 
-if __name__ == "__main__":
-    n = int(input("\n정수를 입력하세요: ").strip())
-    print(f"반복문 기반: {factorial_iter(n)}")
-    try:
-        print(f"재귀 기반: {factorial_rec(n)}")
-    except RecursionError:
-        print("입력값이 너무 커서 재귀 계산은 불가능합니다.")
+def main():
+    """Main console loop"""
+    while True:
+        s = input("정수를 입력하시오(종료를 원하시면 q 또는 quit 입력):").strip()
+        if s.lower() in ("q", "quit"): #if s == 'q' or s == 'quit':로 사용해도 되지만 그럴 경우 소문자 q와 quit만 가능함
+            print("프로그램을 종료합니다")
+            break
 
-    # main()
+        n = int(s)
+        print(f"반복문 기반: {factorial_iter(n)}")
+
+        try:
+            print(f"재귀 기반: {factorial_rec(n)}")
+        except RecursionError:
+            print("입력값이 너무 커서 재귀 계산은 불가능합니다.")
+
+if __name__ == "__main__":
+    main()
